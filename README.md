@@ -13,6 +13,7 @@
 ## API エンドポイント
 
 ### GET /
+
 メインエンドポイント。アプリケーションの基本情報を返します。
 
 ```json
@@ -24,6 +25,7 @@
 ```
 
 ### GET /health
+
 ヘルスチェックエンドポイント。アプリケーションの状態を返します。
 
 ```json
@@ -34,6 +36,7 @@
 ```
 
 ### POST /echo
+
 エコーエンドポイント。送信されたデータをそのまま返します。
 
 ```json
@@ -47,26 +50,31 @@
 ## セットアップ
 
 1. 依存関係をインストール：
+
 ```bash
 npm install
 ```
 
 2. アプリケーションを起動：
+
 ```bash
 npm start
 ```
 
 3. テストを実行：
+
 ```bash
 npm test
 ```
 
 4. コードを整形：
+
 ```bash
 npm run format
 ```
 
 5. Lintを実行：
+
 ```bash
 npm run lint
 ```
@@ -82,6 +90,7 @@ npm run lint
 - **Security Job**: npm auditによるセキュリティチェック
 
 ワークフローは以下のタイミングで実行されます：
+
 - `main`または`master`ブランチへのpush
 - `main`または`master`ブランチへのPull Request
 

@@ -9,15 +9,21 @@
     "lint": "eslint .",
     "format": "prettier --write ."
   },
-  "keywords": ["claude-code", "github-actions", "ci-cd", "demo"],
+  "keywords": [
+    "claude-code",
+    "github-actions",
+    "ci-cd",
+    "demo"
+  ],
   "author": "Claude Code Demo",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "supertest": "^7.1.4"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
     "eslint": "^8.57.0",
+    "jest": "^29.7.0",
     "prettier": "^3.0.3"
   }
 }
