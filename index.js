@@ -38,30 +38,30 @@ app.get('/api/calculate/:operation/:a/:b', (req, res) => {
 
   let result;
   switch (operation) {
-    case 'add':
-      result = add(numA, numB);
-      break;
-    case 'multiply':
-      result = multiply(numA, numB);
-      break;
-    case 'subtract':
-      result = subtract(numA, numB);
-      break;
-    case 'divide':
-      try {
-        result = divide(numA, numB);
-      } catch (error) {
-        return res.status(400).json({
-          error: error.message,
-          operands: [numA, numB],
-        });
-      }
-      break;
-    default:
+  case 'add':
+    result = add(numA, numB);
+    break;
+  case 'multiply':
+    result = multiply(numA, numB);
+    break;
+  case 'subtract':
+    result = subtract(numA, numB);
+    break;
+  case 'divide':
+    try {
+      result = divide(numA, numB);
+    } catch (error) {
       return res.status(400).json({
-        error: 'Invalid operation',
-        supportedOperations: ['add', 'multiply', 'subtract', 'divide'],
+        error: error.message,
+        operands: [numA, numB],
       });
+    }
+    break;
+  default:
+    return res.status(400).json({
+      error: 'Invalid operation',
+      supportedOperations: ['add', 'multiply', 'subtract', 'divide'],
+    });
   }
 
   res.json({
